@@ -1,0 +1,12 @@
+@mixin btn-reset() {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+@mixin list-reset() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

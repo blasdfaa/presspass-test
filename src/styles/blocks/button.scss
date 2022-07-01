@@ -1,0 +1,28 @@
+@use '../mixins' as *;
+
+.button {
+  @include btn-reset();
+}
+
+.button--ghost {
+  @include text-body1(600);
+
+  padding: 16px;
+  color: var(--color-accent);
+  background-color: var(--color-overlay);
+  border-radius: 28px;
+  box-shadow: var(--shadow-scale-2);
+  transition: color 0.1s, background-color 0.1s;
+
+  &:hover {
+    background-color: var(--color-accent-medium);
+    color: var(--color-base-white);
+  }
+
+  &:disabled {
+    background-color: var(--color-overlay);
+    color: var(--color-accent-low);
+    cursor: pointer;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,45 @@
+@use '../mixins' as *;
+
+.survey-card {
+  padding: 40px 32px 48px;
+  border-radius: 12px;
+  background-color: var(--color-base-white);
+  box-shadow: var(--shadow-scale-1);
+  border: none;
+
+  @include media(tablet) {
+    padding: 24px 20px 32px;
+  }
+}
+
+.survey-card__title {
+  @include text-h6();
+
+  margin: 0 0 32px;
+  position: relative;
+  counter-increment: survey-counter 1;
+  padding-left: 20px;
+  color: var(--color-text-high);
+
+  &::before {
+    content: counter(survey-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 500;
+    color: var(--color-accent);
+  }
+}
+
+.survey-card__form {
+  display: grid;
+
+  row-gap: 20px;
+}
+
+.survey-card__form--row {
+  position: relative;
+  grid-template-columns: repeat(auto-fit, 280px);
+  column-gap: 32px;
+  grid-template-rows: auto;
+}

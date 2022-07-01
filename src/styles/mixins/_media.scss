@@ -1,0 +1,21 @@
+$breakpoints: (
+  'tablet': 1024px,
+  'tablet-small': 840px,
+);
+
+@mixin media($breakpoint) {
+  // Если брейкпоинт есть в списке
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Получаем значение брейкпоинта
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    // Используем полученное значение
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+
+    // Если нет, показываем предупреждение
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}

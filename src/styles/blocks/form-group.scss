@@ -1,0 +1,108 @@
+@use '../mixins' as *;
+
+.form-group {
+  display: inline-flex;
+  position: relative;
+}
+
+.form-group__label {
+  @include text-body1();
+
+  padding-left: 36px;
+  color: var(--color-text-medium);
+  z-index: 2;
+}
+
+.form-group__label:hover ~ .form-group__box {
+  border-color: var(--color-accent);
+  background-color: var(--color-overlay-hover);
+}
+
+.form-group__control[type='radio']:checked + .form-group__box {
+  border-color: var(--color-accent);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+  }
+}
+
+.form-group__control[type='checkbox']:focus + .form-group__box {
+  outline: 1px solid var(--color-accent-medium);
+  outline-offset: 4px;
+}
+
+/* Убирает стили для фокуса при клике. По фокусу с помощью клавиатуры стили фокуса останутся */
+.form-group__control[type='checkbox']:not(.focus-visible) + .form-group__box {
+  outline: none;
+}
+
+.form-group__control[type='checkbox']:checked + .form-group__box {
+  border-color: var(--color-accent);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 12px;
+    height: 9px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='vector' d='M5.31354 8.62328C4.82007 9.12557 4.02263 9.12557 3.52917 8.62328L0.369803 5.4086C-0.123268 4.90631 -0.123268 4.0946 0.369803 3.5923C0.863269 3.09001 1.66308 3.09001 2.15536 3.5923L4.38582 5.89482L9.84553 0.376419C10.339 -0.125473 11.1364 -0.125473 11.6299 0.376419C12.1234 0.878713 12.1234 1.69283 11.6299 2.19512L5.31354 8.62328Z' fill='%23028AF3'/%3E%3C/svg%3E");
+  }
+}
+
+.form-group__control[type='radio']:checked:hover + .form-group__box,
+.form-group__control[type='radio']:checked:focus + .form-group__box {
+  background-color: transparent;
+}
+
+.form-group__control:disabled + .form-group__box {
+  opacity: 0.4;
+}
+
+.form-group__control:disabled:hover + .form-group__box {
+  border-color: var(--color-gray);
+  background-color: transparent;
+}
+
+.form-group__control[type='radio']:disabled:checked + .form-group__box {
+  border-color: var(--color-gray);
+
+  &::before {
+    background-color: var(--color-gray);
+  }
+}
+
+.form-group__control[type='checkbox']:disabled:checked + .form-group__box {
+  border-color: var(--color-gray);
+
+  &::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='9' fill='none' viewBox='0 0 12 9'%3E%3Cpath fill='%23A6AFB6' d='M5.314 8.623a1.245 1.245 0 0 1-1.785 0L.37 5.41a1.3 1.3 0 0 1 0-1.817 1.246 1.246 0 0 1 1.786 0l2.23 2.303 5.46-5.52a1.246 1.246 0 0 1 1.785 0 1.302 1.302 0 0 1 0 1.82L5.314 8.622Z'/%3E%3C/svg%3E%0A");
+  }
+}
+
+.form-group__box {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-gray);
+}
+
+.form-group__control[type='radio'] + .form-group__box {
+  border-radius: 50%;
+}
+
+.form-group__control[type='checkbox'] + .form-group__box {
+  border-radius: 2px;
+}

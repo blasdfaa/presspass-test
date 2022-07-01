@@ -1,0 +1,28 @@
+@use '../mixins' as *;
+
+.survey {
+  display: flex;
+  flex-direction: column;
+  counter-reset: survey-counter 0;
+}
+
+.survey__card {
+  &:not(:last-of-type) {
+    margin-bottom: 32px;
+  }
+
+  @include media(tablet-small) {
+    margin: 0 -20px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* Так-как не нашёл размеров в вариантах кнопки, пусть будет он будет настраиваться здесь, а сам блок останется независимым */
+.survey__submit-btn {
+  margin: 48px auto 0;
+  width: 176px;
+  min-height: 56px;
+}

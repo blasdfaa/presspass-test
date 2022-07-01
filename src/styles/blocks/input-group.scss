@@ -1,0 +1,86 @@
+@use '../mixins' as *;
+
+.input-group {
+  @include text-body1();
+
+  position: relative;
+  max-width: 388px;
+  width: 100%;
+}
+
+.input-group__control {
+  font: inherit;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-overlay);
+  color: var(--color-text-medium);
+
+  &::placeholder {
+    color: var(--color-text-low);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px inset var(--color-accent);
+    outline: 0;
+  }
+
+  &::-webkit-autofill {
+    background-color: var(--color-light-gray);
+  }
+
+  &::-webkit-autofill:hover {
+    background-color: var(--color-overlay-hover);
+  }
+}
+
+/* Было не понятно что именно значит состояние filled/filled_hover в макете, сделал оба варианта */
+.input-group__controll--filled {
+  background-color: var(--color-light-gray);
+
+  &:hover {
+    background-color: var(--color-overlay-hover);
+  }
+}
+
+.input-group__control--text {
+  padding: 12px 48px 12px 16px;
+}
+
+.input-group__control--textarea {
+  padding: 12px 16px;
+  min-height: 96px;
+  resize: vertical;
+}
+
+.input-group__icon {
+  position: absolute;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group__icon--left {
+  left: 0;
+}
+
+.input-group__icon--right {
+  right: 0;
+}
+
+.input-group__clear-btn {
+  @include btn-reset();
+
+  display: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: var(--color-overlay);
+    color: var(--color-accent-medium);
+  }
+}

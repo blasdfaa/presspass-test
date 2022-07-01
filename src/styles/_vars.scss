@@ -1,0 +1,35 @@
+:root {
+  --font-family: 'Inter';
+
+  /* colors */
+  --color-base-white: #fff;
+  --color-base-dark: #000;
+
+  --color-accent-low: #9ad0fa;
+  --color-accent-medium: #3fa6f6;
+  --color-accent: #028af3;
+
+  --color-text-low: rgba(0, 0, 0, 0.4);
+  --color-text-medium: rgba(0, 0, 0, 0.6);
+  --color-text-high: rgba(0, 0, 0, 0.87);
+
+  --color-overlay: rgba(2, 138, 243, 0.06);
+  --color-overlay-hover: rgba(63, 144, 206, 0.12);
+
+  --color-gray: #a6afb6;
+  --color-light-gray: #f3f7fa;
+  --color-divider: rgba(179, 197, 210, 0.3);
+  --color-glass: rgba(255, 255, 255, 0.92);
+  --color-button-border: rgba(0, 0, 0, 0.02);
+
+  /* shadows */
+  --shadow-scale-1: 0px 0px 8px rgba(0, 51, 91, 0.04), 0px 24px 52px rgba(0, 51, 91, 0.02);
+  --shadow-scale-2: 0px 2px 4px rgba(2, 73, 129, 0.04);
+
+  /* misc. */
+  --content-width: 1216px;
+  --content-width-md: 800px;
+  --container-offset: 20px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-width-md: calc(var(--content-width-md) + (var(--container-offset) * 2));
+}

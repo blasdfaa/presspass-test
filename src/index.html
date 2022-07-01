@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.scss" />
+    <script type="module" src="js/app.js"></script>
+    <title>Presspass test</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__wrapper">
+        <a class="header__logo" href="/">
+          <svg class="header__logo-icon" width="196" height="52" aria-hidden="true">
+            <use href="assets/images/logo_small.svg"></use>
+          </svg>
+        </a>
+        <div class="header__navigation">
+          <button class="header__burger" type="button"></button>
+          <nav class="nav-menu header__menu">
+            <ul class="nav-menu__list">
+              <li class="nav-menu__item"><a class="nav-menu__link" href="#">О Находке</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="#">Пройдите опрос</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="#">Проекты Находки</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="#">Обсуждения</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="#">Новости</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container container--md">
+        <div class="page-header">
+          <a href="/" class="link link--primary page-header__navigation-link">Назад</a>
+          <h1 class="page-header__title">Поделитесь идеей</h1>
+        </div>
+        <form class="survey">
+          <!-- Расскажите кем вы приходитесь городу  -->
+          <section class="survey-card survey__card">
+            <h2 class="survey-card__title">Расскажите кем вы приходитесь городу</h2>
+            <div class="survey-card__form">
+              <div class="form-group survey-card__form-item">
+                <label class="form-group__label" for="resident">Местный житель</label>
+                <input
+                  class="visually-hidden form-group__control"
+                  value="resident"
+                  id="resident"
+                  name="status"
+                  type="radio"
+                  checked
+                />
+                <span class="form-group__box"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-group__label" for="city-guest">Гость города</label>
+                <input
+                  class="visually-hidden form-group__control"
+                  value="city-guest"
+                  id="city-guest"
+                  name="status"
+                  type="radio"
+                />
+                <span class="form-group__box form-group__box--radio"></span>
+              </div>
+            </div>
+          </section>
+          <!-- Ваш возраст -->
+          <section class="survey-card survey__card">
+            <h2 class="survey-card__title">Ваш возраст</h2>
+            <div class="survey-card__form">
+              <div class="form-group survey-card__form-item">
+                <label class="form-group__label" for="up-to-18">До 18</label>
+                <input
+                  class="visually-hidden form-group__control"
+                  value="up-to-18"
+                  id="up-to-18"
+                  name="age"
+                  type="radio"
+                  checked
+                />
+                <span class="form-group__box"></span>
+              </div>
+              <div class="form-group survey-card__form-item">
+                <label class="form-group__label" for="19-25">19-25</label>
+                <input
+                  class="visually-hidden form-group__control"
+                  value="19-25"
+                  id="19-25"
+                  name="age"
+                  type="radio"
+                />
+                <span class="form-group__box"></span>
+              </div>
+              <div class="form-group survey-card__form-item">
+                <label class="form-group__label" for="26-35">26-35</label>
+                <input
+                  class="visually-hidden form-group__control"
+                  value="26-35"
+                  id="26-35"
+                  name="age"
+                  type="radio"
+                />
+                <span class="form-group__box form-group__box--radio"></span>
+              </div>
+              <div class="form-group survey-card__form-item">
+                <label class="form-group__label" for="36-45">36-45</label>
+                <input
+                  class="visually-hidden form-group__control"
+                  value="36-45"
+                  id="36-45"
+                  name="age"
+                  type="radio"
+                />
+                <span class="form-group__box form-group__box--radio"></span>
+              </div>
+              <div class="form-group survey-card__form-item">
+                <label class="form-group__label" for="46-55">46-55</label>
+                <input
+                  class="visually-hidden form-group__control"
+                  value="46-55"
+                  id="46-55"
+                  name="age"
+                  type="radio"
+                />
+                <span class="form-group__box form-group__box--radio"></span>
+              </div>
+              <div class="form-group survey-card__form-item">
+                <label class="form-group__label" for="56-65">56-65</label>
+                <input
+                  class="visually-hidden form-group__control"
+                  value="56-65"
+                  id="56-65"
+                  name="age"
+                  type="radio"
+                />
+                <span class="form-group__box form-group__box--radio"></span>
+              </div>
+              <div class="form-group survey-card__form-item">
+                <label class="form-group__label" for="more-66">Больше 66</label>
+                <input
+                  class="visually-hidden form-group__control"
+                  value="more-66"
+                  id="more-66"
+                  name="age"
+                  type="radio"
+                />
+                <span class="form-group__box form-group__box--radio"></span>
+              </div>
+            </div>
+          </section>
+          <!-- Вы хотите рассказать -->
+          <section class="survey-card survey__card">
+            <h2 class="survey-card__title">Расскажите кем вы приходитесь городу</h2>
+            <div class="survey-card__form">
+              <div class="form-group survey-card__form-item">
+                <label class="form-group__label" for="problem">О проблеме и ее решении</label>
+                <input
+                  class="visually-hidden form-group__control"
+                  value="problem"
+                  id="problem"
+                  name="story"
+                  type="radio"
+                  checked
+                />
+                <span class="form-group__box"></span>
+              </div>
+              <div class="form-group survey-card__form-item">
+                <label class="form-group__label" for="idea">О идее города</label>
+                <input
+                  class="visually-hidden form-group__control"
+                  value="idea"
+                  id="idea"
+                  name="story"
+                  type="radio"
+                />
+                <span class="form-group__box"></span>
+              </div>
+              <div class="form-group survey-card__form-item">
+                <label class="form-group__label" for="places">Об уникальных интересных местах Находки</label>
+                <input
+                  class="visually-hidden form-group__control"
+                  value="places"
+                  id="places"
+                  name="story"
+                  type="radio"
+                />
+                <span class="form-group__box"></span>
+              </div>
+            </div>
+          </section>
+          <!-- Загрузите картинку и укажите место на карте -->
+          <section class="survey-card survey__card">
+            <h2 class="survey-card__title">Загрузите картинку и укажите место на карте</h2>
+            <div class="survey-card__form survey-card__form--row">
+              <input class="visually-hidden" id="location-input" type="text" required />
+              <button
+                class="button action-text action-text--location-tracker survey-card__form-item-row"
+                id="location"
+                type="button"
+              >
+                <svg class="action-text__icon" width="24" height="24" aria-hidden="true">
+                  <use href="assets/images/icons/icon_location.svg"></use>
+                </svg>
+                <span class="action-text__content">Указать геолокацию</span>
+              </button>
+              <div class="action-text action-text--image-upload survey-card__form-item-row" tabindex="0">
+                <svg class="action-text__icon" width="24" height="24" aria-hidden="true">
+                  <use href="assets/images/icons/icon_image_load.svg"></use>
+                </svg>
+                <label class="action-text__content" for="file-upload"> Добавить изображение </label>
+                <input
+                  name="image"
+                  type="file"
+                  accept="image/*"
+                  class="visually-hidden image-uploader__input"
+                  id="file-upload"
+                  required
+                />
+              </div>
+            </div>
+          </section>
+          <!-- Укажите тему и расскажите идею -->
+          <section class="survey-card survey__card">
+            <h2 class="survey-card__title">Укажите тему и расскажите идею</h2>
+            <div class="survey-card__form">
+              <div class="input-group survey-card__form-item">
+                <label class="visually-hidden input-group__label" for="subject-input">Тема</label>
+                <input
+                  class="input-group__control input-group__control--text"
+                  name="subject"
+                  id="subject-input"
+                  type="text"
+                  placeholder="Тема"
+                  required
+                />
+                <div class="input-group__icon input-group__icon--right">
+                  <button class="input-group__clear-btn" type="button" aria-label="Очистить поле">
+                    <svg width="12" height="12">
+                      <use href="assets/images/icons/icon_clear.svg"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="input-group survey-card__form-item">
+                <label class="visually-hidden input-group__label" for="idea-input">Идея</label>
+                <textarea
+                  class="input-group__control input-group__control--textarea"
+                  name="idea-text"
+                  id="idea-input"
+                  placeholder="Идея"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-group survey-card__form-item">
+                <label class="form-group__label" for="policy"
+                  >Я согласен с
+                  <a class="link link--primary" href="#">политикой обработки персональных данных</a></label
+                >
+                <input
+                  class="visually-hidden form-group__control"
+                  id="policy"
+                  name="policy"
+                  type="checkbox"
+                  required
+                />
+                <span class="form-group__box"></span>
+              </div>
+            </div>
+          </section>
+          <!-- Укажите тему и расскажите идею -->
+          <button class="button button--ghost survey__submit-btn" type="submit">Отправить</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__wrapper">
+        <div class="footer__content">
+          <a href="/" class="footer__logo">
+            <svg class="footer__logo-img" width="376" height="100" aria-hidden="true">
+              <use href="assets/images/logo.svg"></use>
+            </svg>
+          </a>
+          <div class="nav-menu nav-menu--footer footer__menu">
+            <ul class="nav-menu__list">
+              <li class="nav-menu__item"><a class="nav-menu__link" href="#">О Находке</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="#">Пройдите опрос</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="#">Проекты Находки</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="#">Обсуждения</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="#">Новости</a></li>
+            </ul>
+          </div>
+          <div class="footer__links">
+            <a href="mailto:call@my-nakhodka.ru" class="link link--primary link--with-icon footer__links-mail"
+              >call@my-nakhodka.ru</a
+            >
+            <a href="#" class="link link--gray footer__links-policy"
+              >Политика обработки персональных данных</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

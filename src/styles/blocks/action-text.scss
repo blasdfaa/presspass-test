@@ -1,0 +1,27 @@
+@use '../mixins' as *;
+
+.action-text {
+  @include text-body1();
+
+  display: flex;
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+.action-text--location-tracker,
+.action-text--image-upload {
+  position: relative;
+}
+
+.action-text__icon {
+  flex-shrink: 0;
+}
+
+.action-text:hover .action-text__icon,
+.action-text:hover .action-text__content {
+  color: var(--color-accent-medium);
+}
+
+.action-text__icon {
+  margin-right: 12px;
+}

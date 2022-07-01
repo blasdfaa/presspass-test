@@ -1,0 +1,15 @@
+{
+  "name": "presspass_test",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel --no-cache",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.1",
+    "parcel": "^2.6.1",
+    "parcel-packager-svg-sprite": "^2.0.0",
+    "parcel-transformer-svg-sprite": "^2.0.0",
+    "prettier": "^2.7.1"
+  }
+}

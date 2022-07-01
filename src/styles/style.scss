@@ -1,0 +1,20 @@
+/* utils */
+@import 'lib/normalize.css';
+@import 'vars';
+
+/* global styles */
+@import 'global';
+
+/* blocks */
+@import 'blocks/nav-menu';
+@import 'blocks/survey-card.scss';
+@import 'blocks/form-group.scss';
+@import 'blocks/button.scss';
+@import 'blocks/action-text.scss';
+@import 'blocks/link.scss';
+@import 'blocks/success-icon.scss';
+@import 'blocks/input-group.scss';
+@import 'blocks/header';
+@import 'blocks/page-header.scss';
+@import 'blocks/survey.scss';
+@import 'blocks/footer';
