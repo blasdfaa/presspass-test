@@ -7,6 +7,9 @@ const resetForm = () => {
   form.reset();
   locationButton.dataset.valud = false;
   fileInput.value = '';
+  document.querySelectorAll('.success-icon').forEach((el) => {
+    el.remove();
+  });
 };
 
 export const initFormValidation = () => {
